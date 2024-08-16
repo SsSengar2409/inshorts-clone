@@ -3,6 +3,8 @@ import './App.css';
 import NavInshorts from './components/NavInshorts';
 import { apiKey } from './data/constants';
 import { useEffect, useState } from 'react';
+import NewsContent from './components/NewsContent/NewsContent';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [category, setCategory] = useState("general");
@@ -29,6 +31,8 @@ function App() {
   return (
     <div className="App">
       <NavInshorts setCategory={setCategory} />
+      <NewsContent />
+      <Footer />
     </div>
   );
 }
