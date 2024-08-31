@@ -1,15 +1,18 @@
 import { Container } from "@mui/material";
 import React from "react";
-import "./NewsContent.css"
+import "./NewsContent.css";
+import NewsCard from "../NewsCard/NewsCard.js";
 
-const NewsContent = () => {
+const NewsContent = ({ newsResults, totalResults, loadMore, setLoadMore }) => {
     return (
         <Container maxWidth="lg">
             <div className="content">
                 <div className="downloadMessage">
-                    <span className="downloadText">
-                        For the best experience use inshorts app on your smartphone
-                    </span>
+                    <div>
+                        <span className="downloadText">
+                            For the best experience use inshorts app on your smartphone
+                        </span>
+                    </div>
                     <div className="images">
                         <img
                             alt="app store"
@@ -23,6 +26,15 @@ const NewsContent = () => {
                         />
                     </div>
                 </div>
+                {
+                    newsResults.map((newsItem) => <NewsCard newsItem={newsItem} key={newsItem.title} />)
+                }
+                {loadMore <= totalResults && (
+                    <>
+                        <hr />
+                        <button className="loadMore" onClick={() => setLoadMore(loadMore + 20)}>Load More</button>
+                    </>
+                )}
 
             </div>
         </Container>
