@@ -8,11 +8,9 @@ const NewsContent = ({ newsResults, totalResults, loadMore, setLoadMore }) => {
         <Container maxWidth="lg">
             <div className="content">
                 <div className="downloadMessage">
-                    <div>
-                        <span className="downloadText">
-                            For the best experience use inshorts app on your smartphone
-                        </span>
-                    </div>
+                    <span className="downloadText">
+                        For the best experience use inshorts app on your smartphone
+                    </span>
                     <div className="images">
                         <img
                             alt="app store"

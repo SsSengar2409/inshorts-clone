@@ -1,6 +1,7 @@
 .downloadMessage {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 20px 0 35px 0;
     padding: 8px 32px;
     max-height: 120px;
@@ -11,7 +12,6 @@
 }
 
 .downloadText {
-
     flex: 1;
     /* display: block; */
 }
